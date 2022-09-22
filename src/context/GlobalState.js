@@ -26,10 +26,19 @@ function  deletetransaction(id) {
 export const GlobalProvider =({childern}) => {
     const[state,dispatch] =useReducer(AppReducer,initialstate);
 
+    //action 
+    function deleteTransaction(id){
+        dispatch({
+            type:'DELETE_TRANSACTION',
+            payload:id
+        });
+        
+    }
+
     return(
         <GlobalContext.Provider value ={{
             transactions:state.transactions,
-            deletetransaction
+            deleteTransaction
         }}>
             {childern}
         </GlobalContext.Provider>
