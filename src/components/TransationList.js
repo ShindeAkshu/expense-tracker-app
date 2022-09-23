@@ -15,4 +15,4 @@ const TransationList = () => {
   )
 }
 
-export default TransationList
+export default TransationList;
