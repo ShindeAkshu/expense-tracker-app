@@ -5,7 +5,7 @@ const AddTransaction = () => {
   const[amount,setAmount] = useState(0);
   return (
     <>
-      <h3>Add new transaction</h3>
+      
       <form >
         <div className="form-control">
             <label htmlFor="text">Text</label>
