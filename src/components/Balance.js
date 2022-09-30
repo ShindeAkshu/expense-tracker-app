@@ -1,11 +1,12 @@
 import React ,{useContext} from 'react';
 import { GlobalContext } from '../context/GlobalState';
-import Transaction from './Transaction';
 
 
-const Balance = () => {
 
-  const amounts = Transaction.map(transaction => transaction.amount);
+export const Balance = () => {
+  const { transactions } = useContext(GlobalContext); 
+  const amounts = transactions.map(transaction => transaction.amount);
+
   const total = amounts.reduce((acc,item) => (acc += item),0).toFixed(2);
 
   return (
@@ -16,4 +17,4 @@ const Balance = () => {
   )
 }
 
-export default Balance
+
