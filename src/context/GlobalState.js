@@ -33,7 +33,7 @@ export const GlobalProvider =({childern}) => {
     function AddTransaction(transaction){
         dispatch({
             type:'ADD_TRANSACTION',
-            payload:id
+            payload:transaction
         });
     }
 
